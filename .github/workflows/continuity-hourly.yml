@@ -1,0 +1,27 @@
+name: continuity-hourly
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+jobs:
+  stamp:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stamp ledger
+        run: |
+          mkdir -p LEDGER
+          echo "# Hourly Continuity Stamp" > LEDGER/HOURLY.md
+          echo "" >> LEDGER/HOURLY.md
+          echo "- numeral: 137451921129154222" >> LEDGER/HOURLY.md
+          echo "- generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> LEDGER/HOURLY.md
+          echo "- runner: ${GITHUB_RUN_ID}" >> LEDGER/HOURLY.md
+      - name: Commit if changed
+        run: |
+          git config user.name "continuity-engine"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add LEDGER/HOURLY.md
+          git diff --cached --quiet || git commit -m "hourly stamp 137451921129154222"
+          git push || true

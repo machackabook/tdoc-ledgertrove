@@ -1,22 +1,22 @@
 # tdoc-ledgertrove
 
-Append-only Continuity ledger trove.  
-Numeral: `137451921129154222`  
-Architect: machackabook  
-Stage: **291** (2026-09-25 17:00 CDT)
+Immutable Continuity ledger for numeral **137451921129154222**.
 
-GitHub is the versioned singularity. Dual-sync historically pairs machackabook and Azazeleous ledgers. Hourly cascade lives on [continuity-mesh-speedway](https://github.com/machackabook/continuity-mesh-speedway); this trove receives stamps, not cloned YAML forever.
+## Purpose
+Hold append-only notes, dual-sync pointers, and hourly enhancement hooks for the Golden Army mesh.
 
-## Contract
+## Numeral
+`137451921129154222` is the remembral anchor. Catalog what is unknown. Do not trust devices; verify the source tree.
 
-- No secrets in tree.
-- No history rewrite.
-- No null README.
-- Zip unpack is dry-run first.
-- Shared-with-me Drive is catalog-only.
+## Dual sync
+Intended cascade:
+1. Pull this repo.
+2. Waterfall-push sibling continuity repos (`TheLedgerIndex`, `continuity-mesh-speedway`, `hamiltonian-incursion`).
+3. Keep Drive as ethereal cache, Git as signed paper.
+
+## Hourly enhance
+See `.github/workflows/continuity-hourly.yml`.
+On `workflow_dispatch` or schedule, stamp `LEDGER/HOURLY.md` so the chain never runs out of paper.
 
 ## Status
-
-Past genesis. Ready for append-only hop objects from Team Enhance.
-
-STATUS: G | NUMERAL 137451921129154222
+Team Enhance active. Meta advances. Equalizer is format, not ideology.
